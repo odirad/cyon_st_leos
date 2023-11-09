@@ -5,13 +5,10 @@ import Logo from "./logo"
 function Navbar() {
   return (
     <div className="w-full bg-black">
-      <div className=" w-4/5 flex mx-auto pt-3 text-white">
-        <Link className="w-44 flex-none" href="/" ><Logo/></Link>
-        <div className="w-full h-full">
-          {/* <Link href="/" > <Logo/> </Link> */}
-          {/* <a className="btn btn-ghost normal-case text-3xl">Logo</a> */}
-        </div>
-        <div className="flex-none">
+      <div className=" w-4/5 flex justify-between mx-auto pt-3 text-white">
+          <Link className="w-44 flex-none" href="/" ><Logo/></Link>
+
+        <div className="hidden lg:block  flex-none">
           <ul className="menu menu-horizontal px-1 text-lg">
             <li>
               <Link href="/dashboard">About</Link>
@@ -38,6 +35,7 @@ function Navbar() {
             </li>
           </ul>
         </div>
+        <div className="block lg:hidden">Hamburger</div>
       </div>
     </div>
     
