@@ -9,7 +9,7 @@ export default function ({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <body className={inter.className}>
         {/* <Navbar /> */}
-        <Navbar />
+
         <main>{children}</main>
       </body>
     </html>

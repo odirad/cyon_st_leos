@@ -1,11 +1,14 @@
 import Link from "next/link";
 import React from "react";
+import Logo from "./Logo";
 
 function Navbar() {
   return (
-    <nav>
-      <Link href="/">Logo</Link>
-      <ul>
+    <nav className="flex justify-between items-center bg-slate-200 h-20 pl-4 sticky">
+      <Link href="/">
+        <Logo></Logo>
+      </Link>
+      <ul className="flex w-1/4 justify-evenly">
         <li>
           <Link href="/dashboard">Dashboard</Link>
         </li>
