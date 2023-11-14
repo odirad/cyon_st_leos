@@ -16,6 +16,6 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-.container {
+.container{
   padding: 1rem;
 }
