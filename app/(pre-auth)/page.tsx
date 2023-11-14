@@ -8,7 +8,7 @@ export default function Home() {
       <h1>Hello Radi</h1>
       <Link href="/admin/users">users</Link>
       <AddProd />
-      <People />
+      {/* <People /> */}
     </main>
   );
 }
