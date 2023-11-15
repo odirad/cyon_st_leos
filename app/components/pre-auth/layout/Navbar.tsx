@@ -1,45 +1,50 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "./logo";
+import { NavList } from "./NavList";
+import Hamburger from "./Hamburger";
 
 function Navbar() {
-  return (
-    <div className="w-full bg-black">
-      <div className=" w-4/5 flex justify-between mx-auto pt-3 text-white">
-        <Link className="w-44 flex-none" href="/">
-          <Logo />
-        </Link>
+  const [isOpen, setIsOpen] = useState(false);
+  const [isNavTop, setIsNavTop] = useState(true);
 
-        <div className="hidden lg:block  flex-none">
-          <ul className="menu menu-horizontal px-1 text-lg">
-            <li>
-              <Link href="/dashboard">About</Link>
-            </li>
-            <li>
-              <Link href="/about">Contact</Link>
-            </li>
-            <li>
-              <Link href="/events">Events</Link>
-            </li>
-            <li>
-              <Link href="/forum">Forum</Link>
-            </li>
-            <li>
-              <details>
-                <summary>Faith</summary>
-                <ul className="p-2 bg-base-100 bg-black">
-                  <li>
-                    <Link href="/faith/knowYourFaith">K-Y-F</Link>
-                  </li>
-                  <li>
-                    <Link href="/faith/games">Games</Link>
-                  </li>
-                </ul>
-              </details>
-            </li>
+  const changeNavBg = () => setIsNavTop(window.scrollY < 75);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", changeNavBg);
+    }
+    return () => {
+      window.removeEventListener("scroll", changeNavBg);
+    };
+  }, []);
+
+  return (
+    <div
+      className={`navbar px-8 justify-between mx-auto pt-3 fixed top-0 transition-all duration-300  z-10 ${
+        isNavTop ? "text-white " : "text-black bg-white "
+      } ${isOpen && isNavTop && "bg-black"}`}
+    >
+      <Link className=" " href="/">
+        <Logo />
+      </Link>
+
+      <div className="hidden lg:block flex-none">
+        <ul className="menu menu-horizontal px-1 text-lg">
+          <NavList />
+        </ul>
+      </div>
+      <div className="block lg:hidden">
+        <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
+        <div
+          className={` absolute top-full inset-x-0 transition-all duration-100 max-h-0  overflow-clip  p-0${
+            isOpen && " max-h-screen "
+          } ${isNavTop ? "bg-black" : "bg-white"}`}
+        >
+          <ul className="menu">
+            <NavList setIsOpen={setIsOpen} />
           </ul>
         </div>
-        <div className="block lg:hidden">Hamburger</div>
       </div>
     </div>
   );
