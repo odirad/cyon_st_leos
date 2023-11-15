@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Logo from "./logo";
+import Logo from "./Logo";
 import { NavList } from "./NavList";
 import Hamburger from "./Hamburger";
 
