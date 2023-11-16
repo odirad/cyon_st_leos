@@ -1,6 +1,6 @@
+import People from "@/(pre-auth)/_components/People";
 import Image from "next/image";
 import Link from "next/link";
-import People from "../../../components/People";
 export default function () {
   return (
     <main>

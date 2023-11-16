@@ -35,9 +35,9 @@ const Hamburger: FunctionComponent<Props> = ({ isOpen = false, setIsOpen }) => {
             ></div>
 
             <div
-              className={`absolute items-center justify-between transform transition-transform duration-500 top-2.5 -translate-x-10 ${
+              className={`absolute items-center justify-between transform transition-transform duration-500 top-2.5 -translate-x-10  flex w-0 ${
                 isOpen && "translate-x-0"
-              } flex w-0 ${isOpen && "w-12"}`}
+              }`}
             >
               <div
                 className={`absolute bg-current h-[2px] w-5 transform transition-transform duration-300 rotate-0 delay-300 ${

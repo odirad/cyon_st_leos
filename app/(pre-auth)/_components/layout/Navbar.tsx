@@ -31,14 +31,14 @@ function Navbar() {
 
       <div className="hidden lg:block flex-none">
         <ul className="menu menu-horizontal px-1 text-lg">
-          <NavList />
+          <NavList largeScreen={true} />
         </ul>
       </div>
       <div className="block lg:hidden">
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
         <div
-          className={` absolute top-full inset-x-0 transition-all duration-100 max-h-0  overflow-clip  p-0${
-            isOpen && " max-h-screen "
+          className={` absolute top-full inset-x-0 transition-all duration-200 max-h-0 overflow-clip  p-0${
+            isOpen && " max-h-screen"
           } ${isNavTop ? "bg-black" : "bg-white"}`}
         >
           <ul className="menu">
