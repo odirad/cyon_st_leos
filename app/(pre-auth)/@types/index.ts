@@ -1,0 +1,1 @@
+export type {IPageRoutes,IFooterRoutes} from "./app.interfaces"

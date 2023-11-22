@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Dispatch, FC, SetStateAction } from "react";
+import { pageRoutes } from "@pre/_components/layout/NavData";
+
 type TProps = {
   setIsOpen?: Dispatch<SetStateAction<boolean>>;
   largeScreen?: boolean;
@@ -8,20 +10,6 @@ type TProps = {
 type TpageRoute = { name: string; path?: string; children?: TpageRoute[] };
 
 export const NavList: FC<TProps> = ({ setIsOpen = () => {}, largeScreen }) => {
-  const pageRoutes: TpageRoute[] = [
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-    { name: "Events", path: "/events" },
-    { name: "Forum", path: "/forum" },
-    {
-      name: "Faith",
-      children: [
-        { name: "K-Y-F", path: "/faith/know-your-faith" },
-        { name: "Games", path: "/games" },
-      ],
-    },
-  ];
-
   const closeNav = () => {
     setIsOpen(false);
   };
