@@ -1,4 +1,4 @@
-import { flattenPageRoutes } from "@/(pre-auth)/@helpers";
+import { flattenPageRoutes } from "@pre/@helpers";
 import { IPageRoute, IFooterRoutes, IPageRouteWithChildren } from "@pre/@types";
 import WhatsapIcon from "./WhatsapIcon";
 
