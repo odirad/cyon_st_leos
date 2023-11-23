@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Carousel from "@/(pre-auth)/_components/layout/Carousel";
+import Carousel from "@/(pre-auth)/@components/layout/Carousel";
 export default function Home() {
   return (
     <main>
