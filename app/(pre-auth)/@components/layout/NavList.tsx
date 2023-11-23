@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Dispatch, FC, SetStateAction } from "react";
-import { pageRoutes } from "@pre/_components/layout/NavData";
+import { pageRoutes } from "@/(pre-auth)/@components/layout/NavData";
 
 type TProps = {
   setIsOpen?: Dispatch<SetStateAction<boolean>>;

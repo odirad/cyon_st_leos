@@ -1,1 +1,5 @@
-export type {IPageRoutes,IFooterRoutes} from "./app.interfaces"
+export type {
+  IPageRoute,
+  IPageRouteWithChildren,
+  IFooterRoutes,
+} from "./app.interfaces";
