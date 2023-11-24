@@ -25,7 +25,6 @@ export default function RootLayout({
         <Hero />
         <main className="container">{children}</main>
         <Footer />
-        <Footer />
       </body>
     </html>
   );
