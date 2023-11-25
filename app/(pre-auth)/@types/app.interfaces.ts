@@ -19,7 +19,7 @@ export interface IFooterRoutes {
 export interface IPageHero {
   pagePath: string;
   pageTitle: string;
-  heroImageUrl?: string[];
+  heroImageUrl?: string[] | string;
   heroClass: string;
 }
 
