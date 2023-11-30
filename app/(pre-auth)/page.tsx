@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Home() {
   return (
-    <main>
+    <main className="z-40">
       <h1>Hello Radi</h1>
       <Link href="/admin/users">users</Link>
 
