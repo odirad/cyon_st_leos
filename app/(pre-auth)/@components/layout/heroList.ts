@@ -4,14 +4,14 @@ const heroClass = "min-h-[50vh] lg:min-h-[40vh]";
 const homeHeroClass = "min-h-screen";
 const randomImgUrl = () =>
   `https://source.unsplash.com/random/1080×700/?christian&sig=${
-    Math.floor(Math.random() * 10) + 1
+    Math.floor(Math.random() * 100) + 1
   }`;
 export const heroList: IPageHero[] = [
   {
     heroClass: homeHeroClass,
     pagePath: "/",
     pageTitle: "Home",
-    heroImageUrl: [randomImgUrl(), randomImgUrl()],
+    heroImageUrl: [...Array(15)].map(() => randomImgUrl()),
   },
   {
     heroClass,
