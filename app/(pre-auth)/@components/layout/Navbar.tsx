@@ -25,7 +25,7 @@ function Navbar() {
         isNavTop ? "text-white " : "text-black bg-white "
       } ${isOpen && isNavTop && "bg-black"}`}
     >
-      <Link className=" " href="/">
+      <Link className="" href="/">
         <Logo />
       </Link>
 
