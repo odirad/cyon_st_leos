@@ -1,3 +1,6 @@
+import db from "@/(authed)/@utils/db";
+import fetchRandomDBItems from "@/@helpers/fetchRandomDBItems";
+import { IPrismaObject } from "@/@types";
 import Image from "next/image";
 import React from "react";
 
@@ -12,10 +15,17 @@ async function People() {
     { cache: "no-cache" }
     // { next: { revalidate: 10 } }
   );
+  const photos = await fetchRandomDBItems(db.photo, 10);
   const ppl: IPerson[] = await res.json();
   return (
     <div className=" ">
       People <div>{new Date().toLocaleTimeString()}</div>
+      {photos.map((a: { url: string; id: number }) => (
+        <div>
+          {a.id}
+          {a.url}
+        </div>
+      ))}
       <ol className="flex flex-col">
         {ppl.map((person) => (
           <li className="flex justify-between w-1/2" key={person.id}>

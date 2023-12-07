@@ -1,10 +1,7 @@
 import { IFooterRoutes, IPageRoute } from "@/(pre-auth)/@types";
 import { footerRoutes } from "./NavData";
 import Link from "next/link";
-import {
-  isIPageRoute,
-  isISocialRoute,
-} from "@/(pre-auth)/@types/app.interfaces";
+import { isIPageRoute, isISocialRoute } from "@pre/@types/pre-auth.interfaces";
 import Image from "next/image";
 import cyonLogo from "@/images/cyonlogo.png";
 function Footer() {

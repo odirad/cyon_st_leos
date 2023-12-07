@@ -22,8 +22,8 @@ function Navbar() {
   return (
     <div
       className={`navbar px-8 justify-between mx-auto pt-3 fixed top-0 transition-all duration-300  z-10 ${
-        isNavTop ? "text-white " : "text-black bg-white "
-      } ${isOpen && isNavTop && "bg-black"}`}
+        isNavTop ? "text-white " : "text-black bg-white  shadow-xl"
+      } ${isOpen && isNavTop && "bg-black  shadow-xl"}`}
     >
       <Link className="" href="/">
         <Logo />
@@ -37,7 +37,7 @@ function Navbar() {
       <div className="block lg:hidden">
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
         <div
-          className={` absolute top-full inset-x-0 transition-all duration-200 max-h-0 overflow-clip  p-0${
+          className={` absolute top-full inset-x-0 transition-all duration-200 max-h-0 overflow-clip  p-0 shadow-xl ${
             isOpen && " max-h-screen"
           } ${isNavTop ? "bg-black" : "bg-white"}`}
         >
