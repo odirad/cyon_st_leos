@@ -13,7 +13,7 @@ export default function AuthLayout({
   children,
 }: {
   children: React.ReactNode;
-  utils?: any;
+  utils: any;
 }) {
   return (
     <html lang="en">
