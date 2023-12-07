@@ -4,7 +4,11 @@ import "@/globals.css";
 import Navbar from "../(pre-auth)/@components/layout/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
-export default function ({ children }: { children: React.ReactNode }) {
+export default function AuthLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={inter.className}>
