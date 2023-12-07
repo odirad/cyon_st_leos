@@ -18,26 +18,35 @@ export const heroList: IPageHero[] = [
     pagePath: "/about",
     pageTitle: "About",
     heroImageUrl:
-      "https://res.cloudinary.com/dshaxrhao/image/upload/v1701936009/site_images_static/tilv8jlkzgcw0nytta8d.jpg",
+      "https://res.cloudinary.com/dshaxrhao/image/upload/c_scale,w_1080/f_auto/q_auto:eco/v1701936009/site_images_static/tilv8jlkzgcw0nytta8d.jpg",
   },
   {
     heroClass,
     pagePath: "/contact",
     pageTitle: "Contact",
     heroImageUrl:
-      "https://res.cloudinary.com/dshaxrhao/image/upload/v1701935689/site_images_static/rzeymo8668wmg5fibutz.jpg",
+      "https://res.cloudinary.com/dshaxrhao/image/upload/c_scale,w_1080/f_auto/q_auto:eco/v1701935689/site_images_static/rzeymo8668wmg5fibutz.jpg",
   },
   {
     heroClass,
     pagePath: "/faith/know-your-faith/",
     pageTitle: "Know Your Faith",
     heroImageUrl:
-      "https://res.cloudinary.com/dshaxrhao/image/upload/v1701934888/site_images_static/el3smxfkvja5yfgpdv9k.jpg",
+      "https://res.cloudinary.com/dshaxrhao/image/upload/c_scale,w_1080/f_auto/q_auto:eco/v1701934888/site_images_static/el3smxfkvja5yfgpdv9k.jpg",
+  },
+  {
+    heroClass,
+    pagePath: "/events/",
+    pageTitle: "Events",
+    heroImageUrl:
+      "https://res.cloudinary.com/dshaxrhao/image/upload/c_scale,w_1080/f_auto/q_auto:eco/v1701955237/site_images_static/nknms4hgnbaxuuipso6u.jpg",
+    // "https://res.cloudinary.com/dshaxrhao/image/upload/c_scale,w_1080/f_auto/q_auto:eco/v1701955238/site_images_static/o0bggk0gaa6hsma8fnfx.jpg",
   },
   {
     heroClass,
     pagePath: "/default",
     pageTitle: "",
-    heroImageUrl: randomImgUrl(),
+    heroImageUrl:
+      "https://res.cloudinary.com/dshaxrhao/image/upload/c_scale,w_1080/f_auto/q_auto:eco/v1701954775/site_images_static/ld6hrt4rtgrxemsxnb8y.jpg",
   },
 ];
