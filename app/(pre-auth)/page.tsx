@@ -1,7 +1,9 @@
 import Link from "next/link";
+import ScrollToTop from "./@helpers/scrollToTop";
 export default function Home() {
   return (
     <main className="z-40">
+      <ScrollToTop />
       <h1>Hello Radi</h1>
       <Link href="/admin/users">users</Link>
 

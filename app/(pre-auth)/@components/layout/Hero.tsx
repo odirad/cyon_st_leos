@@ -1,6 +1,6 @@
 "use client";
 
-import { IPageHero } from "@/(pre-auth)/@types/app.interfaces";
+import { IPageHero } from "@pre/@types/pre-auth.interfaces";
 import { usePathname } from "next/navigation";
 import { heroList } from "./heroList";
 import Carousel from "./Carousel";
@@ -11,40 +11,39 @@ export default function () {
   const pageHero: IPageHero = getPageHero(pagePath, heroList);
   return (
     <ParallaxProvider>
-      {" "}
-      <Parallax translateY={[-20, 20]}>
-        {pageHero && Array.isArray(pageHero.heroImageUrl) ? (
+      {pageHero && Array.isArray(pageHero.heroImageUrl) ? (
+        <Parallax translateY={[-500, 500]} className="-z-[100] relative">
+          <div className=" bg-black absolute inset-0 z-50 opacity-60"></div>
           <Carousel imageArray={pageHero.heroImageUrl} />
-        ) : (
+        </Parallax>
+      ) : (
+        <Parallax translateY={[-50, 50]} className="-z-[100] relative -mt-28">
           <div
-            className={`hero  ${pageHero.heroClass}`}
+            className={`hero ${pageHero.heroClass}`}
             style={{
               backgroundImage: `url(${pageHero.heroImageUrl})`,
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
-              <div className="max-w-md">
-                <h1 className="mb-5 text-5xl font-bold">
+              <div className="max-w-md z-[100]">
+                <h1 className="mb-5 text-5xl font-bold text-white">
                   {pageHero.pageTitle}
                 </h1>
-                <p className="mb-5">
-                  {pageHero.heroClass} cupiditate {pageHero.heroImageUrl?.[0]}{" "}
-                  et in. {pageHero.pageTitle} fugiat ut {pageHero.pagePath}{" "}
-                  excepturi exercitationem quasi. In deleniti eaque aut
-                  repudiandae et a id nisi.ss
-                </p>
-                <button className="btn btn-primary">Get Started</button>
               </div>
+              <div className=" bg-black absolute inset-0 z-0 opacity-60"></div>
             </div>
           </div>
-        )}
-      </Parallax>
+        </Parallax>
+      )}
     </ParallaxProvider>
   );
 }
 const getPageHero = (pagePath: string, heroList: IPageHero[]): IPageHero => {
-  const pageHero = heroList.find((x) => x.pagePath === pagePath);
+  const pageHero = heroList.find((x) => {
+    const pattern = "^(" + x.pagePath + ")(\\/?\\?{0}|\\/?\\?{1}.*)$";
+    const regex = new RegExp(pattern);
+    return regex.test(pagePath);
+  });
 
   if (pageHero) {
     if (

@@ -2,4 +2,4 @@ export type {
   IPageRoute,
   IPageRouteWithChildren,
   IFooterRoutes,
-} from "./app.interfaces";
+} from "./pre-auth.interfaces";

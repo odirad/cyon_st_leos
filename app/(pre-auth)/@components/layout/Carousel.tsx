@@ -30,7 +30,7 @@ export default function ({ imageArray }: Props): JSX.Element {
         onSwiper={(swiper) => console.log(swiper)}
       >
         {imageArray.map((url, idx) => (
-          <SwiperSlide key={idx} className="text-lg text-lime-500">
+          <SwiperSlide key={idx} className="text-lg text-lime-500 -z-10">
             <Image src={url} width={1080} height={700} alt={`img-${idx}`} />
           </SwiperSlide>
         ))}
