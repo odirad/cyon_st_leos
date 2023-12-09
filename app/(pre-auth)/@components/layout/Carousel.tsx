@@ -15,7 +15,7 @@ export default function ({ imageArray }: Props): JSX.Element {
   //you should set the images in the heroList.ts file.
 
   return (
-    <div className=" text-black h-[99vh] max-h-[99vh] overflow-hidden ">
+    <div className=" text-black h-[99vh] max-h-[90vh] overflow-hidden ">
       <Swiper
         modules={[Autoplay, EffectFade]}
         spaceBetween={30}

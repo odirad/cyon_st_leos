@@ -12,7 +12,7 @@ export default function () {
   return (
     <ParallaxProvider>
       {pageHero && Array.isArray(pageHero.heroImageUrl) ? (
-        <Parallax translateY={[-500, 500]} className="-z-[100] relative">
+        <Parallax translateY={[-500, 450]} className="-z-[100] relative">
           <div className=" bg-black absolute inset-0 z-50 opacity-60"></div>
           <Carousel imageArray={pageHero.heroImageUrl} />
         </Parallax>

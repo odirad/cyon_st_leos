@@ -19,10 +19,10 @@ export default function PreAuthLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} w-screen m-0 p-0 overflow-x-hidden`}>
         <Navbar />
         <Hero />
-        <main className="bg-white w-screen static">{children}</main>
+        <main className="bg-white w-full static">{children}</main>
         <Footer />
       </body>
     </html>
